@@ -34,7 +34,7 @@
             subtracao = new Button();
             multiplicacao = new Button();
             divisao = new Button();
-            operado = new Label();
+            operador = new Label();
             resultado = new Label();
             SuspendLayout();
             // 
@@ -60,6 +60,7 @@
             soma.TabIndex = 2;
             soma.Text = "Soma";
             soma.UseVisualStyleBackColor = true;
+            soma.Click += soma_Click;
             // 
             // subtracao
             // 
@@ -88,14 +89,14 @@
             divisao.Text = "Divisão";
             divisao.UseVisualStyleBackColor = true;
             // 
-            // operado
+            // operador
             // 
-            operado.Location = new Point(110, 21);
-            operado.Name = "operado";
-            operado.Size = new Size(26, 23);
-            operado.TabIndex = 6;
-            operado.Text = "?";
-            operado.TextAlign = ContentAlignment.MiddleCenter;
+            operador.Location = new Point(110, 21);
+            operador.Name = "operador";
+            operador.Size = new Size(26, 23);
+            operador.TabIndex = 6;
+            operador.Text = "?";
+            operador.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // resultado
             // 
@@ -113,7 +114,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(244, 142);
             Controls.Add(resultado);
-            Controls.Add(operado);
+            Controls.Add(operador);
             Controls.Add(divisao);
             Controls.Add(multiplicacao);
             Controls.Add(subtracao);
@@ -134,7 +135,7 @@
         private Button subtracao;
         private Button multiplicacao;
         private Button divisao;
-        private Label operado;
+        private Label operador;
         private Label resultado;
     }
 }
