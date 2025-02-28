@@ -20,10 +20,19 @@ namespace Calculadora_Simples_Forms
             }
             return true;
         }
-
+        public void converter(object sender, EventArgs e)
+        {
+            num1 = float.Parse(campo1.Text);
+            num2 = float.Parse(campo2.Text);
+        }
         private void soma_Click(object sender, EventArgs e)
         {
-            Validar();
+            if (!Validar())
+            {
+                return;
+            }
+            converter(sender, e);
+            resultado.Text = $"{num1} // {num2}";
         }
     }
 }
