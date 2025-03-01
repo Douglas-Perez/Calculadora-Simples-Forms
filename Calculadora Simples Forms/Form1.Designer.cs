@@ -90,6 +90,7 @@
             divisao.TabIndex = 5;
             divisao.Text = "Divisão";
             divisao.UseVisualStyleBackColor = true;
+            divisao.Click += divisao_Click;
             // 
             // operador
             // 
