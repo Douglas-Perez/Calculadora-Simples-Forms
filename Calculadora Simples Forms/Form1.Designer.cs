@@ -94,9 +94,9 @@
             // 
             // operador
             // 
-            operador.Location = new Point(110, 21);
+            operador.Location = new Point(105, 16);
             operador.Name = "operador";
-            operador.Size = new Size(26, 23);
+            operador.Size = new Size(37, 35);
             operador.TabIndex = 6;
             operador.Text = "?";
             operador.TextAlign = ContentAlignment.MiddleCenter;

@@ -1,4 +1,4 @@
-namespace Calculadora_Simples_Forms
+﻿namespace Calculadora_Simples_Forms
 {
     public partial class Form1 : Form
     {
@@ -62,6 +62,12 @@ namespace Calculadora_Simples_Forms
                 return;
             }
             converter(sender, e);
+            if (num2 == 0)
+            {
+                resultado.Text = "Impossível dividir por zero\nDigite outro valor para o denominador";
+                operador.Text = "???";
+                return;
+            }
             resultado.Text = $"{num1 / num2}";
             operador.Text = "/";
         }
