@@ -80,6 +80,7 @@
             multiplicacao.TabIndex = 4;
             multiplicacao.Text = "Multiplicação";
             multiplicacao.UseVisualStyleBackColor = true;
+            multiplicacao.Click += multiplicacao_Click;
             // 
             // divisao
             // 
