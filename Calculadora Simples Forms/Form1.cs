@@ -12,18 +12,16 @@
 
         public bool Validar()
         {
-            if (campo1.Text == "" || campo2.Text == "")
+            bool valido = float.TryParse(campo1.Text, out num1);
+            valido = valido && float.TryParse(campo2.Text, out num2);
+
+            if (!valido)
             {
-                resultado.Text = "Por favor, preencha todos os campos";
+                resultado.Text = "Por favor, preencha todos os campos com valores válidos.";
                 operador.Text = ":(";
-                return false;
+                return valido;
             }
-            return true;
-        }
-        public void converter(object sender, EventArgs e)
-        {
-            num1 = float.Parse(campo1.Text);
-            num2 = float.Parse(campo2.Text);
+            return valido;
         }
         private void soma_Click(object sender, EventArgs e)
         {
@@ -31,7 +29,6 @@
             {
                 return;
             }
-            converter(sender, e);
             resultado.Text = $"{num1 + num2}";
             operador.Text = "+";
         }
@@ -41,7 +38,6 @@
             {
                 return;
             }
-            converter(sender, e);
             resultado.Text = $"{num1 - num2}";
             operador.Text = "-";
         }
@@ -51,7 +47,6 @@
             {
                 return;
             }
-            converter(sender, e);
             resultado.Text = $"{num1 * num2}";
             operador.Text = "X";
         }
@@ -61,10 +56,9 @@
             {
                 return;
             }
-            converter(sender, e);
             if (num2 == 0)
             {
-                resultado.Text = "Impossível dividir por zero\nDigite outro valor para o denominador";
+                resultado.Text = "Impossível dividir por zero.\nDigite outro valor para o denominador.";
                 operador.Text = "???";
                 return;
             }
