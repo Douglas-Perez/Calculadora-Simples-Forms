@@ -32,7 +32,8 @@ namespace Calculadora_Simples_Forms
                 return;
             }
             converter(sender, e);
-            resultado.Text = $"{num1} // {num2}";
+            resultado.Text = $"{num1 + num2}";
+            operador.Text = "+";
         }
     }
 }
