@@ -70,6 +70,7 @@
             subtracao.TabIndex = 3;
             subtracao.Text = "Subtração";
             subtracao.UseVisualStyleBackColor = true;
+            subtracao.Click += subtracao_Click;
             // 
             // multiplicacao
             // 

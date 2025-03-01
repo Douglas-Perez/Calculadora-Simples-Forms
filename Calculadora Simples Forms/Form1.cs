@@ -35,5 +35,16 @@ namespace Calculadora_Simples_Forms
             resultado.Text = $"{num1 + num2}";
             operador.Text = "+";
         }
+
+        private void subtracao_Click(object sender, EventArgs e)
+        {
+            if (!Validar())
+            {
+                return;
+            }
+            converter(sender, e);
+            resultado.Text = $"{num1 - num2}";
+            operador.Text = "-";
+        }
     }
 }
