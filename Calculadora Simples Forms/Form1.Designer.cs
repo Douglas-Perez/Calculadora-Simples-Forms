@@ -1,6 +1,6 @@
 ﻿namespace Calculadora_Simples_Forms
 {
-    partial class Form1
+    partial class Calculadora
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculadora));
             campo1 = new TextBox();
             campo2 = new TextBox();
             soma = new Button();
@@ -54,6 +55,8 @@
             // 
             // soma
             // 
+            soma.Cursor = Cursors.Hand;
+            soma.Font = new Font("Segoe UI", 9F);
             soma.Location = new Point(12, 82);
             soma.Name = "soma";
             soma.Size = new Size(101, 23);
@@ -64,6 +67,8 @@
             // 
             // subtracao
             // 
+            subtracao.Cursor = Cursors.Hand;
+            subtracao.Font = new Font("Segoe UI", 9F);
             subtracao.Location = new Point(131, 82);
             subtracao.Name = "subtracao";
             subtracao.Size = new Size(101, 23);
@@ -74,6 +79,7 @@
             // 
             // multiplicacao
             // 
+            multiplicacao.Cursor = Cursors.Hand;
             multiplicacao.Location = new Point(12, 111);
             multiplicacao.Name = "multiplicacao";
             multiplicacao.Size = new Size(101, 23);
@@ -84,6 +90,7 @@
             // 
             // divisao
             // 
+            divisao.Cursor = Cursors.Hand;
             divisao.Location = new Point(131, 111);
             divisao.Name = "divisao";
             divisao.Size = new Size(101, 23);
@@ -111,11 +118,12 @@
             resultado.Text = "Resultado";
             resultado.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // Calculadora
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(244, 142);
+            BackColor = Color.AliceBlue;
+            ClientSize = new Size(244, 156);
             Controls.Add(resultado);
             Controls.Add(operador);
             Controls.Add(divisao);
@@ -124,8 +132,10 @@
             Controls.Add(soma);
             Controls.Add(campo2);
             Controls.Add(campo1);
-            Name = "Form1";
-            Text = "Form1";
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            Name = "Calculadora";
+            Text = "Calculadora";
             ResumeLayout(false);
             PerformLayout();
         }
